@@ -1,20 +1,18 @@
 ---
-минимальное кол-во серверов для отказоустойчивости:
+минимальное кол-во серверов для отказоустойчивости,
+и выбор операционных систем для них:
 
-nginx balancer for iis	- 1 сервер
-iis	- 2 сервера
+nginx balancer for iis	- 1 сервер, OS Ubuntu 22
+iis			- 2 сервера, OS Windows server 2022
 	
-
-mssql кластер - 3 сервера
-
+mssql кластер 		- 3 сервера, OS Windows server 2022
 	
-doker swarm кластер - 3 сервера
+doker swarm кластер 	- 3 сервера, OS Ubuntu 22
 	
-haproxy + Keepalived balancer for pg - 1 сервер	
-pg + etcd + patroni	- 3 сервера
-
+haproxy + Keepalived balancer for pg - 1 сервер, OS Ubuntu 22	
+pg + etcd + patroni	- 3 сервера, OS Ubuntu 22
 	
-mongo сервера в кластере -3 сервера
+mongo сервера в кластере -3 сервера, OS Ubuntu 22
 
 итого 16 серверов
 
