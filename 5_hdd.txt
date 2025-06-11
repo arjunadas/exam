@@ -1,0 +1,34 @@
+# создаём раздел
+fdisk /dev/sdb
+
+# форматируем
+mkfs.xfs /dev/sdb1
+
+# создаём папку
+mkdir -p /mnt/data
+
+# монитиурем
+mount /dev/sdb1 /mnt/data
+
+# проверяем файловую систему
+df -T
+/dev/sdb1                         xfs
+
+
+# get UUID
+blkid
+/dev/sdb1: UUID="e5591e8f-60ac-4d45-8f6c-1f8c8d8f1c66" TYPE="xfs"
+
+# set avto mount
+nano /etc/fstab
+/dev/disk/by-uuid/e5591e8f-60ac-4d45-8f6c-1f8c8d8f1c66  /mnt/data xfs defaults 0 1
+
+# отмонитиурем
+mount /dev/sdb1
+
+# проверяем, что данные в /etc/fstab внесены верно!
+mount -a
+
+# всё верно
+df -T
+/dev/sdb1                         xfs
