@@ -16,8 +16,8 @@ sudo -u postgres psql -c "\du"
 # postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
 
 
-# add user
-sudo -u postgres psql -c 'CREATE USER "user";' 
+#добавляем пользователя с именем user
+sudo -u postgres psql -c 'CREATE USER "user";'
 
 #проверяем
 sudo -u postgres psql -c "\du"

@@ -7,8 +7,8 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  
-#3  
+
+#3
 sudo apt-get update && sudo apt-get install docker-ce
 
 
@@ -31,7 +31,7 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 </html>
 EOF
 
-#Add the User to the docker Group, use the command: 
+#Add the User to the docker Group, use the command:
 sudo usermod -aG docker test_user && newgrp docker
 
 # run nginx
