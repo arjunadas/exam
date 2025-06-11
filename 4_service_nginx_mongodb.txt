@@ -4,7 +4,8 @@ systemctl status nginx
 #видим ошибку
 nginx.service: Failed at step EXEC spawning /usr/sbin/nginxt: No such file or directory
 
-#правим /lib/systemd/system/nginx.service , убираем линюю букву t -> nginxt
+#правим /lib/systemd/system/nginx.service , убираем лишнюю букву t -> nginxt
+#делаем правльно:
 ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
 
 systemctl daemon-reload
@@ -30,7 +31,6 @@ nano /etc/mongodb.conf
 port = 27017 #mongodb default port 27017
 
 systemctl start mongodb
-
 
 
 
