@@ -1,0 +1,14 @@
+---
+Отчёт по выполнению задания.
+Я описал подробно все свои действия в каждом файле:
+
+1_script_archive.sh
+2_script_install_docker_nginx.sh
+3_install_PG.sh
+4_service_nginx_mongodb.txt
+5_hdd.txt
+6_cluster.txt
+6_сетевая_схема_кластера
+
+
+#tar -czvf report.tar.gz *
